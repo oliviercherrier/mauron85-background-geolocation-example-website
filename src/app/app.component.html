@@ -1,5 +1,13 @@
-
-<Tree [nodes]="oldNodes"></Tree>
-
-
-<Tree [nodes]="nodes"></Tree>
+<div>
+    <div style="width: 100%; text-align: center; font-size: large">
+        <p> Paths registered using mauron85-background-geolocation-example-ionic2 </p>
+    </div>
+    <div style="width: 100%; display: flex">
+        <div style = "float: left; width: 24%; border-style: solid solid solid solid">
+            <Tree [nodes]="nodes" (onActivate)="onActivate($event)"></Tree>
+        </div>
+        <div style= "float: right; width: 75%; border-style: solid solid solid solid">
+            <div id="mapid" style="height: 250px;"></div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*Huggly hack: Place me in app.component.css: bug due to add of decoration in CSS injected into WebSite*/
+.tree {
+  display: block !important;
+}
+
+.node-content-wrapper{
+  overflow: hidden;
+  word-wrap: break-word;
+}
