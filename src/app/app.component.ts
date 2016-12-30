@@ -23,6 +23,7 @@ export class AppComponent {
     this._usersService.getUsers().subscribe((r: User[]) => {
       this.usersList = r;
       this.nodes = []; 
+      // Foreach or map could be bettter
       for (let userKey in this.usersList){
         let currentUser = {'userObject': this.usersList[userKey],'id': this.usersList[userKey]._id, "name": this.usersList[userKey].first_name};
         let currentPaths = [];
@@ -54,6 +55,7 @@ export class AppComponent {
 
   toLeafLetLatLong = (locations: Location[]): LatLng[] =>{
     let leafletLatLong: LatLng[] = [];
+    // Foreach or map could be bettter
     for (let locKey in locations){
       leafletLatLong.push([locations[locKey].latitude, locations[locKey].longitude])
     }
